@@ -1,0 +1,19 @@
+<script>
+    function myfun(i){
+        if(i>=2){
+            return i*myfun(i-1);
+        }else{
+            return 1;
+        }
+    }
+x= myfun(6);
+console.log(x)
+</script>   
+<!-- 
+2*1;
+3*2;
+4*6;
+5*24;
+6*120;
+720
+ -->

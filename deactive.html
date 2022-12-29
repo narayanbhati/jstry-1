@@ -1,0 +1,22 @@
+<input type="checkbox" onclick="tot(this)" value="php">PHP
+<input type="checkbox" onclick="tot(this)" value="laravel">Laravel
+<input type="checkbox" onclick="tot(this)" value="html">html
+<input type="checkbox" onclick="tot(this)" value="css">css
+<input type="checkbox" onclick="tot(this)" value="js">js
+<input type="checkbox" onclick="tot(this)" value="react">React
+<input type="text" id="count" value="0">
+<script>
+    function tot(obj){
+        if(obj.checked){
+            if(count.value<3){
+                count.value=Number(count.value)+1;
+                }  else{
+                         obj.checked=false;
+                alert("You can only select 3 items");
+             }   
+        }else{
+            count.value-=1;
+        }
+   
+    }
+</script>

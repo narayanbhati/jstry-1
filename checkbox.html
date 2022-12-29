@@ -1,0 +1,23 @@
+<input type="checkbox" onclick="go(this)">
+<input type="checkbox" class="del" value="php">PHP
+<input type="checkbox" class="del" value="laravel">Laravel
+<input type="checkbox" class="del" value="html">html
+<input type="checkbox" class="del" value="css">css
+<input type="checkbox" class="del" value="js">js
+<input type="checkbox" class="del" value="react">React
+<script>
+function go(ck){
+    
+    lobjs=document.getElementsByClassName('del');
+        n=lobjs.length;
+    if(ck.checked){
+        for(i=0;i<n;i++){
+            lobjs[i].checked=true;
+        }
+    }else{
+        for(i=0;i<n;i++){
+            lobjs[i].checked=false;
+        }
+    }
+}
+</script>

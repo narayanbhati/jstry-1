@@ -1,0 +1,16 @@
+<input type="button" onclick="sh(this)" value="Hide">
+<div id="r-6">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolor natus omnis libero illum, pariatur doloribus ut saepe beatae veniam qui fugit esse molestias tempore reprehenderit aliquam dolore aspernatur harum.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatum nesciunt, eligendi labore, molestiae provident facere corporis quaerat impedit modi ipsum? Corrupti nulla accusantium, expedita cumque ipsam dolorum unde. Dolor.
+</div>
+<script>
+    function sh(btn){
+        if(btn.value=='Hide'){
+            document.getElementById('r-6').style.display='none';
+            btn.value="Show";
+        }else{
+            document.getElementById('r-6').style.display='block';
+            btn.value="Hide";
+        }
+    }
+</script>

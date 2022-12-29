@@ -1,0 +1,21 @@
+<input type="number" id="a">
+<input type="number" id="b">
+<select id="task" onchange="myfun()">
+    <option value="">Select Action</option>
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="**">power</option>
+</select>
+<script>
+    function myfun(){
+        if(task.value){
+            switch(task.value){
+                case '+': alert(Number(a.value) + Number(b.value)); break;
+                case '-': alert(a.value - b.value); break;
+                case '*': alert(a.value * b.value); break;
+                case '**': alert(a.value ** b.value); break;
+            }
+        }
+    }
+</script>

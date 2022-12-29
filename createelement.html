@@ -1,0 +1,38 @@
+<div id="main">
+    <div id="d1">
+        <label for="t2">Name -1 </label> <input type="text" name="t1" id="t1">
+    </div>
+</div>
+<button onclick="createEle()">create</button>
+<button onclick="RemoveEle()">Remove</button>
+
+<input type="hidden" id="tot" value="1">
+
+<script>
+    function RemoveEle() {
+        if(tot.value>2){
+            obj=document.getElementById('d'+tot.value);
+            main.removeChild(obj);
+            tot.value= parseInt(tot.value) -1;
+        }else{
+            alert("Abe delete koni hoe");
+        }
+    }
+    function createEle() {
+        tot.value= parseInt(tot.value) +1;
+        let dv=document.createElement('div');
+        dv.setAttribute('id',`d${tot.value}`);
+        let txtbox=document.createElement('input');
+        txtbox.setAttribute('name',`t${tot.value}`);
+        txtbox.setAttribute('type','text');
+        txtbox.setAttribute('id',`t${tot.value}`);
+        let lbl=document.createElement('label');
+        lbl.setAttribute('for',`t${tot.value}`);
+        let text=document.createTextNode('Name - '+tot.value);
+        lbl.appendChild(text);
+        dv.appendChild(lbl);
+        
+        dv.appendChild(txtbox);
+        main.appendChild(dv);
+    }
+</script>

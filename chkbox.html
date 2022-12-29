@@ -1,0 +1,20 @@
+<input type="checkbox" onclick="tot(this)" value="5000">PHP
+<input type="checkbox" onclick="tot(this)" value="2500">Laravel
+<input type="checkbox" onclick="tot(this)" value="1100">html
+<input type="checkbox" onclick="tot(this)" value="3600">css
+<input type="checkbox" onclick="tot(this)" value="4000">js
+<input type="checkbox" onclick="tot(this)" value="8520">React
+<input readonly type="text" id="count" value="0">
+<script>
+    function tot(obj){
+        if(obj.checked){
+            
+            count.value=Number(count.value)+Number(obj.value);
+                }  else{
+                count.value=Number(count.value)-Number(obj.value);
+                         
+             }   
+        
+   
+    }
+</script>

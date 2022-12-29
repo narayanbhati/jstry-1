@@ -1,0 +1,49 @@
+
+<input type="number" id="noe"><button onclick="createEle()">Ok</button>
+<div id="main">
+    <div id="d1">
+        <label for="t2">Name -1 </label> <input type="text" name="t1" id="t1">
+    </div>
+</div>
+
+<input type="hidden" id="tot" value="1">
+
+<script>
+    function RemoveEle() {
+        if(tot.value>2){
+            obj=document.getElementById('d'+tot.value);
+            main.removeChild(obj);
+            tot.value= parseInt(tot.value) -1;
+        }else{
+            alert("Abe delete koni hoe");
+        }
+    }
+    function createEle() {
+        for(let i=1;i<=noe.value;i++){
+            tot.value= parseInt(tot.value) +1;
+            let dv=document.createElement('div');
+            dv.setAttribute('id',`d${tot.value}`);
+            let txtbox=document.createElement('input');
+            txtbox.setAttribute('name',`t${tot.value}`);
+            txtbox.setAttribute('type','text');
+            txtbox.setAttribute('id',`t${tot.value}`);
+            let lbl=document.createElement('label');
+            lbl.setAttribute('for',`t${tot.value}`);
+            let text=document.createTextNode('Name - '+tot.value);
+            
+            lbl.appendChild(text);
+            // let ct=document.createTextNode('&#10060;');
+            let spn=document.createElement('span');
+                spn.style.cursor='pointer';
+                spn.innerHTML='&#10060;';
+                spn.setAttribute('onclick',`document.getElementById('d${tot.value}').remove()`);
+            // spn.appendChild(ct);
+            
+            dv.appendChild(lbl);
+            
+            dv.appendChild(txtbox);
+            dv.appendChild(spn);
+            main.appendChild(dv);
+        }
+    }
+</script>

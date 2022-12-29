@@ -1,0 +1,27 @@
+<script>
+    class A{
+        constructor(nm="Axixa",cty="Bikaner"){
+            this.name=nm;
+            this.city=cty;
+            //alert("hello");
+        }
+        myfun(){
+            console.log(this.name);
+            console.log(this.city);
+        }
+        bkafun(){
+            alert("ye b ka fun");
+        }
+    }
+    class B extends A{
+        bkafun(){
+            alert("ye b ka fun");
+        }
+    }    
+    var obj=new A('Rajesh','Jaipur');
+    var obj2=new B();
+    obj.myfun();
+    obj2.myfun();
+    obj2.bkafun();
+
+</script>

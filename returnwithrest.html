@@ -1,0 +1,22 @@
+<script>
+    function cal(op,...list){
+        switch(op){
+                case '+': 
+                        var result=0;
+                         for(let i=0;i<list.length;i++){
+                                result+=list[i];
+                            } 
+                            return result;
+                case '*': 
+                           var result=1;
+                            for(let i=0;i<list.length;i++){
+                                result*=list[i];
+
+                            } 
+                            return result;
+                default: return null;            
+        }
+    }
+    console.log(cal('+',12,4,2,1));
+    console.log(cal('*',2,4,2));
+</script>

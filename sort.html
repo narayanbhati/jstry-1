@@ -1,0 +1,18 @@
+<script>
+    //default value set ker ke optional banana
+    function sum(...b){//parameter or formal parameter
+        // console.log(b);
+        for(let i=0;i<b.length;i++){
+            for(let j=i+1;j<b.length;j++){
+                if(b[i]>b[j]){
+                    extra=b[i];
+                    b[i]=b[j];
+                    b[j]=extra;
+                }
+        }
+    }
+        return b;
+    }
+     ary=sum(41,1,2,3,4,6,2,3,5,7);
+     console.log(ary);
+</script>

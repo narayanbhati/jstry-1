@@ -1,0 +1,20 @@
+<script>
+    class A{
+            constructor(){
+                this.name="Ramu";
+                this.city="Jaipur";
+           }
+           loadData(){
+                console.log(this.name);
+                console.log(this.city);
+            }
+        }
+        class B extends A {
+            loadData(){
+                console.log(this.name + "Babu");
+                console.log(this.city + " city");
+            }
+        }
+        obj=new B();
+        obj.loadData();
+    </script>

@@ -1,0 +1,10 @@
+<script>
+    let x='city';
+    let myobj={
+      ['my_'+x]:'bikaner',
+      myfun(){
+       console.log('this is method '+this.my_city);
+       console.log(this['my_'+x])
+      }
+    };
+    myobj.myfun();

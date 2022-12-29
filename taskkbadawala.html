@@ -1,0 +1,125 @@
+<select id="s1" onchange="showD()">
+    <option value="">Select One</option>
+    <option>Prime</option>
+    <option>Factiorial</option>
+    <option>Armstrong</option>
+    <option>Febonic</option>
+    <option>Palno</option>
+</select>
+<select id="tpy" onchange=" if(this.value=='Single'){
+    multi.style.display='none';
+    singled.style.display='block';
+    }else{
+        multi.style.display='block';
+        singled.style.display='none';
+    
+    }" style="display:none;">
+    <option>Single</option>
+    <option>Range</option>
+</select>
+<div id="singled"  style="display:none;">
+    <input type="number" id="single" onkeyup="btn.style.display=(this.value)?'':'none';" placeholder="Enter value" >
+</div>
+<div id="multi"  style="display:none;" >
+    <input type="number" id="from" placeholder="Enter From" onkeyup="showbtn()" >
+    <input type="number" id="to" placeholder="Enter To" onkeyup="showbtn()"> 
+</div>
+<div id="r"></div>
+<button id="btn" type="button" onclick="task()" style="display:none">Ok</button>
+<script>
+function showD(){
+    if(s1.value){
+    tpy.style.display='';
+    if(tpy.value=="Single")
+         singled.style.display='block';
+     else
+         multi.style.display='block';
+
+    }else{
+        tpy.style.display=singled.style.display='none';
+    
+    }
+}
+function showbtn(){
+    if(from.value && to.value){
+        btn.style.display='';
+    }else{
+        btn.style.display="none";
+    }
+}
+function task(){
+    r.innerHTML="";
+    if(tpy.value=='Single'){
+        switch(s1.value){
+            case "Prime":
+                    var val=single.value;
+                    f=0;                    
+                    for(var i=2;i<val;i++){
+                            if(val%i==0){
+                                f=1;
+                                break;
+                            }
+                    }
+                    if(f==0){
+                        r.innerHTML= val+" value is prime no";
+                    }else{
+                        r.innerHTML= val+" value is not prime no";
+
+                    }
+                            break;
+            case "Factiorial": 
+                         var val=single.value;
+                          f=1;
+                          for(var i=val;i>1;i--){
+                            f=f*i;
+                          }  
+                          r.innerHTML=  val +" factorial is "+ f;
+                            break;
+            case "Armstrong": alert("single ke sath Armstrong ho gaya");
+                            break;
+            case "Febonic": alert("single ke sath Febonic ho gaya");
+                            break;
+            case "Palno": alert("single ke sath palno ho gaya");
+                            break;
+        }
+    }else{
+        switch(s1.value){
+            case "Prime":
+
+                let counter=0;
+                for(var m=from.value;m<=to.value;m++){
+                   var val=m;
+                    f=0;                    
+                    for(var i=2;i<val;i++){
+                            if(val%i==0){
+                                f=1;
+                                break;
+                            }
+                    }
+                    if(f==0){
+                        r.innerHTML+= val+" value is prime no <br>";
+                        counter++;
+                    }
+                }
+                r.innerHTML+="<b> Total is : "+counter+"</b>";
+                            break;
+            case "Factiorial": 
+                    for(var val=from.value;val<=to.value;val++){
+
+                            var f=1;
+                          for(var i=val;i>1;i--){
+                            f=f*i;
+                          }  
+                          r.innerHTML+=  val +" factorial is "+ f +" <br>";
+                        }
+                            break;
+            case "Armstrong": alert("Mult ke sath Armstrong ho gaya");
+                            break;
+            case "Febonic": alert("Mult ke sath Febonic ho gaya");
+                            break;
+            case "Palno": alert("Mult ke sath palno ho gaya");
+                            break;
+        }  
+    }
+}
+</script>

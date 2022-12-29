@@ -1,0 +1,18 @@
+<script>
+    function myfun(i){
+        if(i<=5){
+            return i*myfun(i+1);
+        }else{
+            return 1;
+        }
+    }
+x= myfun(1);
+console.log(x)
+</script>   
+<!-- 
+    5*1
+    4*5
+    3*20
+    2*60
+    1*120
+ -->

@@ -1,0 +1,15 @@
+<div id="main">
+    <div id="d1">
+         <input type="text" id="t1">
+    </div>
+</div>
+<button onclick="sonu()">create</button>
+
+<input type="hidden" id="tot" value="1">
+
+<script>
+    function sonu() {
+        tot.value= parseInt(tot.value) +1;
+    main.innerHTML+=`<div id="d${tot.value}"> <input type="text" id="t${tot.value}"></div>`; 
+    }
+</script>
